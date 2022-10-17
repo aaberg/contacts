@@ -3,7 +3,7 @@ using Eventuous.Projections.MongoDB;
 using MongoDB.Driver;
 using static Contacts.Domain.Contact.ContactEvents;
 
-namespace Contacts.Application.Queries;
+namespace Contacts.Api.Application.Queries;
 
 public class ContactStateProjection : MongoProjection<ContactDocument>
 {

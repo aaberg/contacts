@@ -2,7 +2,7 @@ using MongoDb.Bson.NodaTime;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Extensions.DiagnosticSources;
 
-namespace Contacts.Infrastructure;
+namespace Contacts.Api.Infrastructure;
 
 public static class Mongo
 {

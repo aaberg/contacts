@@ -1,8 +1,8 @@
 using System.Text.Json;
-using Contacts.Application;
-using Contacts.Application.Queries;
+using Contacts.Api.Application;
+using Contacts.Api.Application.Queries;
+using Contacts.Api.Infrastructure;
 using Contacts.Domain.Contact;
-using Contacts.Infrastructure;
 using Eventuous;
 using Eventuous.Diagnostics.OpenTelemetry;
 using Eventuous.EventStore;
@@ -15,7 +15,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-namespace Contacts;
+namespace Contacts.Api;
 
 public static class Registrations
 {

@@ -1,7 +1,7 @@
 using System.Collections.Immutable;
 using Eventuous.Projections.MongoDB.Tools;
 
-namespace Contacts.Application.Queries;
+namespace Contacts.Api.Application.Queries;
 
 public record ContactDocument : ProjectedDocument
 {
@@ -10,8 +10,8 @@ public record ContactDocument : ProjectedDocument
     }
     
     public string                             Name         { get; init; }
-    public ImmutableList<string>              Emails       { get; init; }
-    public ImmutableList<PhoneNumberDocument> PhoneNumbers { get; init; }
+    public List<string>              Emails       { get; init; }
+    public List<PhoneNumberDocument> PhoneNumbers { get; init; }
     public string                             Description  { get; init; }
 }
 

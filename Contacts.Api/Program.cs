@@ -1,4 +1,4 @@
-using Contacts;
+using Contacts.Api;
 using Contacts.Domain.Contact;
 using Eventuous;
 using Eventuous.AspNetCore;

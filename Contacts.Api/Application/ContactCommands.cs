@@ -1,4 +1,4 @@
-namespace Contacts.Application;
+namespace Contacts.Api.Application;
 
 public static class ContactCommands
 {

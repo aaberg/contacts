@@ -1,8 +1,8 @@
 using Contacts.Domain.Contact;
 using Eventuous;
-using static Contacts.Application.ContactCommands;
+using static Contacts.Api.Application.ContactCommands;
 
-namespace Contacts.Application;
+namespace Contacts.Api.Application;
 
 public class ContactManagerService : ApplicationService<Contact, ContactState, ContactId>
 {

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{76B26D91-9671-4367-88A8-FC3B4C8D5BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "Contacts\Contacts.csproj", "{61088E8C-B1E5-4355-9BFF-C7177D1CAB87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{61088E8C-B1E5-4355-9BFF-C7177D1CAB87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain.Tests", "Contacts.Domain.Tests\Contacts.Domain.Tests.csproj", "{A72D791C-7F40-4325-A5BC-0C7ADB0B8D28}"
 EndProject

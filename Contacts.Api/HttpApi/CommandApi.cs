@@ -1,12 +1,12 @@
-using Contacts.Application;
+using Contacts.Api.Application;
 using Contacts.Domain.Contact;
 using Eventuous;
 using Eventuous.AspNetCore.Web;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Contacts.HttpApi;
+namespace Contacts.Api.HttpApi;
 
-[Route("api/contact")]
+[Route("api/contacts")]
 public class CommandApi : CommandHttpApiBase<Contact>
 {
     public CommandApi(IApplicationService<Contact> service) : base(service)
