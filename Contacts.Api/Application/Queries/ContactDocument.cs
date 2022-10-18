@@ -9,10 +9,10 @@ public record ContactDocument : ProjectedDocument
     {
     }
     
-    public string                             Name         { get; init; }
+    public string                    Name         { get; init; }
     public List<string>              Emails       { get; init; }
     public List<PhoneNumberDocument> PhoneNumbers { get; init; }
-    public string                             Description  { get; init; }
+    public string                    Description  { get; init; }
 }
 
 public record PhoneNumberDocument

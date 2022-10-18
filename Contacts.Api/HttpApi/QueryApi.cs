@@ -16,13 +16,22 @@ public class QueryApi : ControllerBase
 
     [HttpGet]
     [Route("")]
-    public IAsyncEnumerable<ContactDocument> GetContacts( CancellationToken cancellationToken, int page = 0, int pageSize = 10)
+    public async Task<IEnumerable<ContactDocument>> GetContacts( CancellationToken cancellationToken, int page = 0, int pageSize = 10)
     {
-        var contacts = _database.GetCollection<ContactDocument>("Contact").AsQueryable()
+        var contacts = await _database.GetCollection<ContactDocument>("Contact").AsQueryable()
             .Skip(pageSize * page)
             .Take(pageSize)
-            .ToAsyncEnumerable();
-
+            .ToAsyncEnumerable()
+            .ToListAsync(cancellationToken);
         return contacts;
+    }
+
+    [HttpGet]
+    [Route("{contactId}")]
+    public async Task<ContactDocument> GetContact([FromRoute] Guid contactId, CancellationToken cancellationToken)
+    {
+        return await _database.GetCollection<ContactDocument>("Contact")
+            .FindAsync(document => document.Id == contactId.ToString(), default, cancellationToken)
+            .Result.FirstOrDefaultAsync(cancellationToken);
     }
 }
